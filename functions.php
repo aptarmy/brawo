@@ -177,6 +177,8 @@ function _s_scripts() {
 	//wp_enqueue_style( '_s-icon-font', get_template_directory_uri() . '/libs/font-awesome/css/font-awesome.min.css' );
 	wp_enqueue_style( '_s-genericons', get_template_directory_uri() . '/libs/genericons/genericons.css' );
 
+	wp_enqueue_script( '_s-sticky-sidebar', get_template_directory_uri() . '/libs/jquery.sticky-kit.min.js', array('jquery'));
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
