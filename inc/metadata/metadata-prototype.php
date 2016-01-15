@@ -13,14 +13,14 @@
  * Function to add metabox
  */
 function _s_custom_meta() {
-	add_meta_box( '_s_meta', __( 'Meta Box Title', '_s' ), '_s_meta_callback', 'post', 'side', 'default' );
+	add_meta_box( '_s_meta', __( 'Meta Box Title', '_s' ), '_s_meta_form', 'post', 'side', 'default' );
 }
 add_action( 'add_meta_boxes', '_s_custom_meta' );
 
 /**
  * Call back function
  */
-function _s_meta_callback( $post ) {
+function _s_meta_form( $post ) {
     wp_nonce_field( basename( __FILE__ ), '_s_nonce' ); // For security check. Read WP document for more infomation.
     $_s_stored_meta = get_post_meta( $post->ID );
     ?>
