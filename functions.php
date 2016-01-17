@@ -219,3 +219,8 @@ require get_template_directory() . '/inc/metadata/metadata.php';
  * Load Widgets
  */
 require get_template_directory() . '/inc/widgets/widgets.php';
+
+/**
+ * Load TGM Plugin Activation
+ */
+require_once get_template_directory() . '/inc/tgm/tgm.php';
