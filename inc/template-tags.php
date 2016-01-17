@@ -7,7 +7,7 @@
  * @package brawo
  */
 
-if ( ! function_exists( 'brawo_post_date' ) ) :
+if ( !function_exists( 'brawo_post_date' )) :
 /**
  * div.meta-date > time.meta-date-published
  */
@@ -45,7 +45,8 @@ endif;
 
 if ( ! function_exists( 'brawo_post_cats' ) ) :
 	/**
-	 * Print categories list for post
+	 * span.meta-cats
+	 * ul > li > a
 	 */
 	function brawo_post_cats(){
 		if ( 'post' === get_post_type() ) {
@@ -60,7 +61,8 @@ endif;
 
 if ( ! function_exists( 'brawo_post_tags' ) ) :
 	/**
-	 * Print tags list for post
+	 * span.meta-tags
+	 * ul > li > a
 	 */
 	function brawo_post_tags(){
 		if ( 'post' === get_post_type() ) {
@@ -75,7 +77,7 @@ endif;
 
 if ( ! function_exists( 'brawo_post_comment_link' ) ) :
 	/**
-	 * Print a link to comment
+	 * span.comments-link > a
 	 */
 	function brawo_post_comment_link() {
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
@@ -88,7 +90,7 @@ endif;
 
 if (!function_exists('brawo_post_edit')) :
 	/**
-	 * Get edit link for a post
+	 * span.post-edit > a
 	 */
 	function brawo_post_edit(){
 		edit_post_link(
@@ -104,6 +106,8 @@ if (!function_exists('brawo_post_rating')):
 	/**
 	 * Display post star rating using metadata(metabox) added by "/inc/metabox/metabox.php"
 	 * This function should be used within the loop.
+	 * the HTML structure will be...
+	 * meta.rating > meta-rating-background > meta-rating-color
 	 */
 	function brawo_post_rating(){
 		$meta_value = get_post_meta( get_the_ID(), 'brawo-meta-rating', true );
@@ -150,6 +154,8 @@ endif;
 if (!function_exists('brawo_post_views_count')) {
 	/**
 	 * display post view count using post metadata added by the file "/inc/metadata/metadata-post-view.php"
+	 * the HTML structure will be...
+	 * span.meta-views
 	 */
 	function brawo_post_views_count() {
 		$meta_value = get_post_meta(get_the_ID(), 'brawo_post_views_count', true );
