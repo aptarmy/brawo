@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package bravo
+ * @package brawo
  */
 
 get_header(); ?>
@@ -13,11 +13,11 @@ get_header(); ?>
 
 		<section class="post-404">
 			<header class="post-header">
-				<h1 class="post-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bravo' ); ?></h1>
+				<h1 class="post-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'brawo' ); ?></h1>
 			</header>
 
 			<div class="post-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search below?', 'bravo' ); ?></p>
+				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search below?', 'brawo' ); ?></p>
 
 				<?php
 					get_search_form();

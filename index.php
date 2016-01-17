@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package bravo
+ * @package brawo
  */
 
 get_header(); ?>

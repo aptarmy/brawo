@@ -7,7 +7,7 @@ if ( !class_exists( 'APT_AC000' ) ) {
     function __construct() {
 
       $widget_options = array(
-        'description' => __( 'Displays list of posts with an array of options', 'bravo' )
+        'description' => __( 'Displays list of posts with an array of options', 'brawo' )
       );
 
       $control_options = array(
@@ -16,7 +16,7 @@ if ( !class_exists( 'APT_AC000' ) ) {
 
       parent::__construct(
         'APT-AC000',
-        __( 'APT-AC000', 'bravo' ),
+        __( 'APT-AC000', 'brawo' ),
         $widget_options,
         $control_options
       );
@@ -235,7 +235,7 @@ if ( !class_exists( 'APT_AC000' ) ) {
 
       // Set default arguments
       $instance = wp_parse_args( (array) $instance, array(
-        'title' => __('Ultimate Posts', 'bravo'),
+        'title' => __('Ultimate Posts', 'brawo'),
         'class' => '',
         'title_link' => '' ,
         'number' => '5',
@@ -246,7 +246,7 @@ if ( !class_exists( 'APT_AC000' ) ) {
         'thumb_size' => 'thumbnail',
         'attag' => false,
         'excerpt_length' => 10,
-        'excerpt_readmore' => __('Read more &rarr;', 'bravo'),
+        'excerpt_readmore' => __('Read more &rarr;', 'brawo'),
         'order' => 'DESC',
         'orderby' => 'date',
         'meta_key' => '',

@@ -1,8 +1,8 @@
 <?php
 /**
- * bravo Theme Customizer.
+ * brawo Theme Customizer.
  *
- * @package bravo
+ * @package brawo
  */
 
 /**
@@ -10,17 +10,17 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function bravo_customize_register( $wp_customize ) {
+function brawo_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 }
-add_action( 'customize_register', 'bravo_customize_register' );
+add_action( 'customize_register', 'brawo_customize_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function bravo_customize_preview_js() {
-	wp_enqueue_script( 'bravo_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+function brawo_customize_preview_js() {
+	wp_enqueue_script( 'brawo_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
-add_action( 'customize_preview_init', 'bravo_customize_preview_js' );
+add_action( 'customize_preview_init', 'brawo_customize_preview_js' );

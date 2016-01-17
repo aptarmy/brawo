@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package bravo
+ * @package brawo
  */
 
 /**
@@ -13,7 +13,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function bravo_body_classes( $classes ) {
+function brawo_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -26,4 +26,4 @@ function bravo_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'bravo_body_classes' );
+add_filter( 'body_class', 'brawo_body_classes' );

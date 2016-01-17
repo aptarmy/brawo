@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package bravo
+ * @package brawo
  */
 
 get_header(); ?>
@@ -15,7 +15,7 @@ get_header(); ?>
 		if ( have_posts() ) : ?>
 
 			<header class="post-header">
-				<h1 class="post-title"><?php printf( esc_html__( 'Search Results for: %s', 'bravo' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="post-title"><?php printf( esc_html__( 'Search Results for: %s', 'brawo' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header>
 
 			<?php

@@ -1,13 +1,13 @@
 <?php
 /**
- * bravo functions and definitions.
+ * brawo functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package bravo
+ * @package brawo
  */
 
-if ( ! function_exists( 'bravo_setup' ) ) :
+if ( ! function_exists( 'brawo_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'bravo_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function bravo_setup() {
+function brawo_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on bravo, use a find and replace
-	 * to change 'bravo' to the name of your theme in all the template files.
+	 * If you're building a theme based on brawo, use a find and replace
+	 * to change 'brawo' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'bravo', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'brawo', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ function bravo_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'bravo' ),
+		'primary' => esc_html__( 'Primary', 'brawo' ),
 	) );
 
 	/*
@@ -72,7 +72,7 @@ function bravo_setup() {
 	) );
     
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'bravo_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'brawo_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
@@ -90,11 +90,11 @@ function bravo_setup() {
 	});
 
 	// Add editor style for TinyMCE
-	//add_editor_style(bravo_fonts_url());
+	//add_editor_style(brawo_fonts_url());
 	
 }
 endif;
-add_action( 'after_setup_theme', 'bravo_setup' );
+add_action( 'after_setup_theme', 'brawo_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -103,19 +103,19 @@ add_action( 'after_setup_theme', 'bravo_setup' );
  *
  * @global int $content_width
  */
-function bravo_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'bravo_content_width', 640 );
+function brawo_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'brawo_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'bravo_content_width', 0 );
+add_action( 'after_setup_theme', 'brawo_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function bravo_widgets_init() {
+function brawo_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'bravo' ),
+		'name'          => esc_html__( 'Sidebar', 'brawo' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -124,33 +124,33 @@ function bravo_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'bravo_widgets_init' );
+add_action( 'widgets_init', 'brawo_widgets_init' );
 
-if ( ! function_exists( 'bravo_fonts_url' ) ) :
+if ( ! function_exists( 'brawo_fonts_url' ) ) :
 /**
- * Register Google fonts for bravo.
+ * Register Google fonts for brawo.
  *
- * Create your own bravo_fonts_url() function to override in a child theme.
+ * Create your own brawo_fonts_url() function to override in a child theme.
  *
  * @return string Google fonts URL for the theme.
  */
-function bravo_fonts_url() {
+function brawo_fonts_url() {
 	$fonts_url = '';
 	$fonts     = array();
 	$subsets   = 'latin,latin-ext';
 
 	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Open+Sans font: on or off', 'bravo' ) ) {
+	if ( 'off' !== _x( 'on', 'Open+Sans font: on or off', 'brawo' ) ) {
 		$fonts[] = 'Open Sans:400,700,900,400italic,700italic,900italic';
 	}
 
 	/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'bravo' ) ) {
+	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'brawo' ) ) {
 		$fonts[] = 'Montserrat:400,700';
 	}
 
 	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'bravo' ) ) {
+	if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'brawo' ) ) {
 		$fonts[] = 'Inconsolata:400';
 	}
 
@@ -168,22 +168,22 @@ endif;
 /**
  * Enqueue scripts and styles.
  */
-function bravo_scripts() {
+function brawo_scripts() {
     // Add custom fonts, used in the main stylesheet.
-	wp_enqueue_style( 'bravo-fonts', bravo_fonts_url(), array(), null );
+	wp_enqueue_style( 'brawo-fonts', brawo_fonts_url(), array(), null );
     
-	wp_enqueue_style( 'bravo-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'brawo-style', get_stylesheet_uri() );
 	
-	//wp_enqueue_style( 'bravo-icon-font', get_template_directory_uri() . '/libs/font-awesome/css/font-awesome.min.css' );
-	wp_enqueue_style( 'bravo-genericons', get_template_directory_uri() . '/libs/genericons/genericons.css' );
+	//wp_enqueue_style( 'brawo-icon-font', get_template_directory_uri() . '/libs/font-awesome/css/font-awesome.min.css' );
+	wp_enqueue_style( 'brawo-genericons', get_template_directory_uri() . '/libs/genericons/genericons.css' );
 
-	wp_enqueue_script( 'bravo-sticky-sidebar', get_template_directory_uri() . '/libs/jquery.sticky-kit.min.js', array('jquery'));
+	wp_enqueue_script( 'brawo-sticky-sidebar', get_template_directory_uri() . '/libs/jquery.sticky-kit.min.js', array('jquery'));
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'bravo_scripts' );
+add_action( 'wp_enqueue_scripts', 'brawo_scripts' );
 
 /**
  * Implement the Custom Header feature.

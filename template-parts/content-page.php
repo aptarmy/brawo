@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package bravo
+ * @package brawo
  */
 
 ?>
@@ -19,7 +19,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="subpage-links">' . esc_html__( 'Pages:', 'bravo' ),
+				'before' => '<div class="subpage-links">' . esc_html__( 'Pages:', 'brawo' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -28,7 +28,7 @@
 	<footer class="post-footer">
 		<?php
 			edit_post_link(
-				__( 'Edit', 'bravo' ),				
+				__( 'Edit', 'brawo' ),				
 				'<span class="post-edit">',
 				'</span>'
 			);

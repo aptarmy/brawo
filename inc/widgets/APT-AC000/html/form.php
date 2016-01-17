@@ -1,34 +1,34 @@
 <div class="APT-AC000-tabs">
-  <a class="APT-AC000-tab-item active" data-toggle="APT-AC000-tab-general"><?php _e('General', 'bravo'); ?></a>
-  <a class="APT-AC000-tab-item" data-toggle="APT-AC000-tab-display"><?php _e('Display', 'bravo'); ?></a>
-  <a class="APT-AC000-tab-item" data-toggle="APT-AC000-tab-filter"><?php _e('Filter', 'bravo'); ?></a>
-  <a class="APT-AC000-tab-item" data-toggle="APT-AC000-tab-order"><?php _e('Order', 'bravo'); ?></a>
+  <a class="APT-AC000-tab-item active" data-toggle="APT-AC000-tab-general"><?php _e('General', 'brawo'); ?></a>
+  <a class="APT-AC000-tab-item" data-toggle="APT-AC000-tab-display"><?php _e('Display', 'brawo'); ?></a>
+  <a class="APT-AC000-tab-item" data-toggle="APT-AC000-tab-filter"><?php _e('Filter', 'brawo'); ?></a>
+  <a class="APT-AC000-tab-item" data-toggle="APT-AC000-tab-order"><?php _e('Order', 'brawo'); ?></a>
 </div>
 
 <div class="APT-AC000-tab APT-AC000-tab-general">
 
   <p>
-	<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'bravo' ); ?>:</label>
+	<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'brawo' ); ?>:</label>
 	<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
   </p>
 
   <p>
-	<label for="<?php echo $this->get_field_id( 'title_link' ); ?>"><?php _e( 'Title URL', 'bravo' ); ?>:</label>
+	<label for="<?php echo $this->get_field_id( 'title_link' ); ?>"><?php _e( 'Title URL', 'brawo' ); ?>:</label>
 	<input class="widefat" id="<?php echo $this->get_field_id( 'title_link' ); ?>" name="<?php echo $this->get_field_name( 'title_link' ); ?>" type="text" value="<?php echo $title_link; ?>" />
   </p>
 
   <p>
-	<label for="<?php echo $this->get_field_id( 'class' ); ?>"><?php _e( 'CSS class', 'bravo' ); ?>:</label>
+	<label for="<?php echo $this->get_field_id( 'class' ); ?>"><?php _e( 'CSS class', 'brawo' ); ?>:</label>
 	<input class="widefat" id="<?php echo $this->get_field_id( 'class' ); ?>" name="<?php echo $this->get_field_name( 'class' ); ?>" type="text" value="<?php echo $class; ?>" />
   </p>
 
   <p>
-	<label for="<?php echo $this->get_field_id('before_posts'); ?>"><?php _e('Before posts', 'bravo'); ?>:</label>
+	<label for="<?php echo $this->get_field_id('before_posts'); ?>"><?php _e('Before posts', 'brawo'); ?>:</label>
 	<textarea class="widefat" id="<?php echo $this->get_field_id('before_posts'); ?>" name="<?php echo $this->get_field_name('before_posts'); ?>" rows="5"><?php echo $before_posts; ?></textarea>
   </p>
 
   <p>
-	<label for="<?php echo $this->get_field_id('after_posts'); ?>"><?php _e('After posts', 'bravo'); ?>:</label>
+	<label for="<?php echo $this->get_field_id('after_posts'); ?>"><?php _e('After posts', 'brawo'); ?>:</label>
 	<textarea class="widefat" id="<?php echo $this->get_field_id('after_posts'); ?>" name="<?php echo $this->get_field_name('after_posts'); ?>" rows="5"><?php echo $after_posts; ?></textarea>
   </p>
 
@@ -37,54 +37,54 @@
 <div class="APT-AC000-tab APT-AC000-hide APT-AC000-tab-display">
 
   <p>
-	<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts', 'bravo' ); ?>:</label>
+	<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts', 'brawo' ); ?>:</label>
 	<input class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="number" value="<?php echo $number; ?>" min="-1" />
   </p>
 
   <p>
 	<input class="checkbox" id="<?php echo $this->get_field_id( 'show_title' ); ?>" name="<?php echo $this->get_field_name( 'show_title' ); ?>" type="checkbox" <?php checked( (bool) $show_title, true ); ?> />
-	<label for="<?php echo $this->get_field_id( 'show_title' ); ?>"><?php _e( 'Show title', 'bravo' ); ?></label>
+	<label for="<?php echo $this->get_field_id( 'show_title' ); ?>"><?php _e( 'Show title', 'brawo' ); ?></label>
   </p>
 
   <p>
 	<input class="checkbox" id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" type="checkbox" <?php checked( (bool) $show_date, true ); ?> />
-	<label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Show published date', 'bravo' ); ?></label>
+	<label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Show published date', 'brawo' ); ?></label>
   </p>
 
   <p<?php if (!$show_date) echo ' style="display:none;"'; ?>>
-	<label for="<?php echo $this->get_field_id('date_format'); ?>"><?php _e( 'Date format', 'bravo' ); ?>:</label>
+	<label for="<?php echo $this->get_field_id('date_format'); ?>"><?php _e( 'Date format', 'brawo' ); ?>:</label>
 	<input class="widefat" type="text" id="<?php echo $this->get_field_id('date_format'); ?>" name="<?php echo $this->get_field_name('date_format'); ?>" value="<?php echo $date_format; ?>" />
   </p>
 
   <p>
 	<input class="checkbox" id="<?php echo $this->get_field_id( 'show_author' ); ?>" name="<?php echo $this->get_field_name( 'show_author' ); ?>" type="checkbox" <?php checked( (bool) $show_author, true ); ?> />
-	<label for="<?php echo $this->get_field_id( 'show_author' ); ?>"><?php _e( 'Show post author', 'bravo' ); ?></label>
+	<label for="<?php echo $this->get_field_id( 'show_author' ); ?>"><?php _e( 'Show post author', 'brawo' ); ?></label>
   </p>
 
   <p>
 	<input class="checkbox" id="<?php echo $this->get_field_id( 'show_comments' ); ?>" name="<?php echo $this->get_field_name( 'show_comments' ); ?>" type="checkbox" <?php checked( (bool) $show_comments, true ); ?> />
-	<label for="<?php echo $this->get_field_id( 'show_comments' ); ?>"><?php _e( 'Show comments count', 'bravo' ); ?></label>
+	<label for="<?php echo $this->get_field_id( 'show_comments' ); ?>"><?php _e( 'Show comments count', 'brawo' ); ?></label>
   </p>
 
   <p>
 	<input class="checkbox" id="<?php echo $this->get_field_id( 'show_excerpt' ); ?>" name="<?php echo $this->get_field_name( 'show_excerpt' ); ?>" type="checkbox" <?php checked( (bool) $show_excerpt, true ); ?> />
-	<label for="<?php echo $this->get_field_id( 'show_excerpt' ); ?>"><?php _e( 'Show excerpt', 'bravo' ); ?></label>
+	<label for="<?php echo $this->get_field_id( 'show_excerpt' ); ?>"><?php _e( 'Show excerpt', 'brawo' ); ?></label>
   </p>
 
   <p<?php if (!$show_excerpt) echo ' style="display:none;"'; ?>>
-	<label for="<?php echo $this->get_field_id('excerpt_length'); ?>"><?php _e( 'Excerpt length (in words)', 'bravo' ); ?>:</label>
+	<label for="<?php echo $this->get_field_id('excerpt_length'); ?>"><?php _e( 'Excerpt length (in words)', 'brawo' ); ?>:</label>
 	<input class="widefat" type="number" id="<?php echo $this->get_field_id('excerpt_length'); ?>" name="<?php echo $this->get_field_name('excerpt_length'); ?>" value="<?php echo $excerpt_length; ?>" min="-1" />
   </p>
 
   <p>
 	<input class="checkbox" id="<?php echo $this->get_field_id( 'show_content' ); ?>" name="<?php echo $this->get_field_name( 'show_content' ); ?>" type="checkbox" <?php checked( (bool) $show_content, true ); ?> />
-	<label for="<?php echo $this->get_field_id( 'show_content' ); ?>"><?php _e( 'Show content', 'bravo' ); ?></label>
+	<label for="<?php echo $this->get_field_id( 'show_content' ); ?>"><?php _e( 'Show content', 'brawo' ); ?></label>
   </p>
 
   <p<?php if (!$show_excerpt && !$show_content) echo ' style="display:none;"'; ?>>
 	<label for="<?php echo $this->get_field_id('show_readmore'); ?>">
 	<input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('show_readmore'); ?>" name="<?php echo $this->get_field_name('show_readmore'); ?>"<?php checked( (bool) $show_readmore, true ); ?> />
-	<?php _e( 'Show read more link', 'bravo' ); ?>
+	<?php _e( 'Show read more link', 'brawo' ); ?>
 	</label>
   </p>
 
@@ -99,7 +99,7 @@
 	<p>
 	  <input class="checkbox" id="<?php echo $this->get_field_id( 'show_thumbnail' ); ?>" name="<?php echo $this->get_field_name( 'show_thumbnail' ); ?>" type="checkbox" <?php checked( (bool) $show_thumbnail, true ); ?> />
 
-	  <label for="<?php echo $this->get_field_id( 'show_thumbnail' ); ?>"><?php _e( 'Show thumbnail', 'bravo' ); ?></label>
+	  <label for="<?php echo $this->get_field_id( 'show_thumbnail' ); ?>"><?php _e( 'Show thumbnail', 'brawo' ); ?></label>
 	</p>
 
 	<p<?php if (!$show_thumbnail) echo ' style="display:none;"'; ?>>
@@ -115,16 +115,16 @@
 
   <p>
 	<input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('show_cats'); ?>" name="<?php echo $this->get_field_name('show_cats'); ?>" <?php checked( (bool) $show_cats, true ); ?> />
-	<label for="<?php echo $this->get_field_id('show_cats'); ?>"> <?php _e('Show post categories', 'bravo'); ?></label>
+	<label for="<?php echo $this->get_field_id('show_cats'); ?>"> <?php _e('Show post categories', 'brawo'); ?></label>
   </p>
 
   <p>
 	<input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('show_tags'); ?>" name="<?php echo $this->get_field_name('show_tags'); ?>" <?php checked( (bool) $show_tags, true ); ?> />
-	<label for="<?php echo $this->get_field_id('show_tags'); ?>"> <?php _e('Show post tags', 'bravo'); ?></label>
+	<label for="<?php echo $this->get_field_id('show_tags'); ?>"> <?php _e('Show post tags', 'brawo'); ?></label>
   </p>
 
   <p>
-	<label for="<?php echo $this->get_field_id( 'custom_fields' ); ?>"><?php _e( 'Show custom fields (comma separated)', 'bravo' ); ?>:</label>
+	<label for="<?php echo $this->get_field_id( 'custom_fields' ); ?>"><?php _e( 'Show custom fields (comma separated)', 'brawo' ); ?>:</label>
 	<input class="widefat" id="<?php echo $this->get_field_id( 'custom_fields' ); ?>" name="<?php echo $this->get_field_name( 'custom_fields' ); ?>" type="text" value="<?php echo $custom_fields; ?>" />
   </p>
 
@@ -134,11 +134,11 @@
 
   <p>
 	<input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('atcat'); ?>" name="<?php echo $this->get_field_name('atcat'); ?>" <?php checked( (bool) $atcat, true ); ?> />
-	<label for="<?php echo $this->get_field_id('atcat'); ?>"> <?php _e('Show posts only from current category', 'bravo');?></label>
+	<label for="<?php echo $this->get_field_id('atcat'); ?>"> <?php _e('Show posts only from current category', 'brawo');?></label>
   </p>
 
   <p>
-	<label for="<?php echo $this->get_field_id('cats'); ?>"><?php _e( 'Categories', 'bravo' ); ?>:</label>
+	<label for="<?php echo $this->get_field_id('cats'); ?>"><?php _e( 'Categories', 'brawo' ); ?>:</label>
 	<select name="<?php echo $this->get_field_name('cats'); ?>[]" id="<?php echo $this->get_field_id('cats'); ?>" class="widefat" style="height: auto;" size="<?php echo $c ?>" multiple>
 	  <option value="" <?php if (empty($cats)) echo 'selected="selected"'; ?>><?php _e('&ndash; Show All &ndash;') ?></option>
 	  <?php
@@ -152,11 +152,11 @@
   <?php if ($tag_list) : ?>
 	<p>
 	  <input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('attag'); ?>" name="<?php echo $this->get_field_name('attag'); ?>" <?php checked( (bool) $attag, true ); ?> />
-	  <label for="<?php echo $this->get_field_id('attag'); ?>"> <?php _e('Show posts only from current tag', 'bravo');?></label>
+	  <label for="<?php echo $this->get_field_id('attag'); ?>"> <?php _e('Show posts only from current tag', 'brawo');?></label>
 	</p>
 
 	<p>
-	  <label for="<?php echo $this->get_field_id('tags'); ?>"><?php _e( 'Tags', 'bravo' ); ?>:</label>
+	  <label for="<?php echo $this->get_field_id('tags'); ?>"><?php _e( 'Tags', 'brawo' ); ?>:</label>
 	  <select name="<?php echo $this->get_field_name('tags'); ?>[]" id="<?php echo $this->get_field_id('tags'); ?>" class="widefat" style="height: auto;" size="<?php echo $t ?>" multiple>
 		<option value="" <?php if (empty($tags)) echo 'selected="selected"'; ?>><?php _e('&ndash; Show All &ndash;') ?></option>
 		<?php
@@ -168,7 +168,7 @@
   <?php endif; ?>
 
   <p>
-	<label for="<?php echo $this->get_field_id('types'); ?>"><?php _e( 'Post types', 'bravo' ); ?>:</label>
+	<label for="<?php echo $this->get_field_id('types'); ?>"><?php _e( 'Post types', 'brawo' ); ?>:</label>
 	<select name="<?php echo $this->get_field_name('types'); ?>[]" id="<?php echo $this->get_field_id('types'); ?>" class="widefat" style="height: auto;" size="<?php echo $n ?>" multiple>
 	  <option value="" <?php if (empty($types)) echo 'selected="selected"'; ?>><?php _e('&ndash; Show All &ndash;') ?></option>
 	  <?php
@@ -181,11 +181,11 @@
   </p>
 
   <p>
-	<label for="<?php echo $this->get_field_id('sticky'); ?>"><?php _e( 'Sticky posts', 'bravo' ); ?>:</label>
+	<label for="<?php echo $this->get_field_id('sticky'); ?>"><?php _e( 'Sticky posts', 'brawo' ); ?>:</label>
 	<select name="<?php echo $this->get_field_name('sticky'); ?>" id="<?php echo $this->get_field_id('sticky'); ?>" class="widefat">
-	  <option value="show"<?php if( $sticky === 'show') echo ' selected'; ?>><?php _e('Show All Posts', 'bravo'); ?></option>
-	  <option value="hide"<?php if( $sticky == 'hide') echo ' selected'; ?>><?php _e('Hide Sticky Posts', 'bravo'); ?></option>
-	  <option value="only"<?php if( $sticky == 'only') echo ' selected'; ?>><?php _e('Show Only Sticky Posts', 'bravo'); ?></option>
+	  <option value="show"<?php if( $sticky === 'show') echo ' selected'; ?>><?php _e('Show All Posts', 'brawo'); ?></option>
+	  <option value="hide"<?php if( $sticky == 'hide') echo ' selected'; ?>><?php _e('Hide Sticky Posts', 'brawo'); ?></option>
+	  <option value="only"<?php if( $sticky == 'only') echo ' selected'; ?>><?php _e('Show Only Sticky Posts', 'brawo'); ?></option>
 	</select>
   </p>
 
@@ -194,27 +194,27 @@
 <div class="APT-AC000-tab APT-AC000-hide APT-AC000-tab-order">
 
   <p>
-	<label for="<?php echo $this->get_field_id('orderby'); ?>"><?php _e('Order by', 'bravo'); ?>:</label>
+	<label for="<?php echo $this->get_field_id('orderby'); ?>"><?php _e('Order by', 'brawo'); ?>:</label>
 	<select name="<?php echo $this->get_field_name('orderby'); ?>" id="<?php echo $this->get_field_id('orderby'); ?>" class="widefat">
-	  <option value="date"<?php if( $orderby == 'date') echo ' selected'; ?>><?php _e('Published Date', 'bravo'); ?></option>
-	  <option value="title"<?php if( $orderby == 'title') echo ' selected'; ?>><?php _e('Title', 'bravo'); ?></option>
-	  <option value="comment_count"<?php if( $orderby == 'comment_count') echo ' selected'; ?>><?php _e('Comment Count', 'bravo'); ?></option>
+	  <option value="date"<?php if( $orderby == 'date') echo ' selected'; ?>><?php _e('Published Date', 'brawo'); ?></option>
+	  <option value="title"<?php if( $orderby == 'title') echo ' selected'; ?>><?php _e('Title', 'brawo'); ?></option>
+	  <option value="comment_count"<?php if( $orderby == 'comment_count') echo ' selected'; ?>><?php _e('Comment Count', 'brawo'); ?></option>
 	  <option value="rand"<?php if( $orderby == 'rand') echo ' selected'; ?>><?php _e('Random'); ?></option>
-	  <option value="meta_value"<?php if( $orderby == 'meta_value') echo ' selected'; ?>><?php _e('Custom Field', 'bravo'); ?></option>
-	  <option value="menu_order"<?php if( $orderby == 'menu_order') echo ' selected'; ?>><?php _e('Menu Order', 'bravo'); ?></option>
+	  <option value="meta_value"<?php if( $orderby == 'meta_value') echo ' selected'; ?>><?php _e('Custom Field', 'brawo'); ?></option>
+	  <option value="menu_order"<?php if( $orderby == 'menu_order') echo ' selected'; ?>><?php _e('Menu Order', 'brawo'); ?></option>
 	</select>
   </p>
 
   <p<?php if ($orderby !== 'meta_value') echo ' style="display:none;"'; ?>>
-	<label for="<?php echo $this->get_field_id( 'meta_key' ); ?>"><?php _e('Custom field', 'bravo'); ?>:</label>
+	<label for="<?php echo $this->get_field_id( 'meta_key' ); ?>"><?php _e('Custom field', 'brawo'); ?>:</label>
 	<input class="widefat" id="<?php echo $this->get_field_id('meta_key'); ?>" name="<?php echo $this->get_field_name('meta_key'); ?>" type="text" value="<?php echo $meta_key; ?>" />
   </p>
 
   <p>
-	<label for="<?php echo $this->get_field_id('order'); ?>"><?php _e('Order', 'bravo'); ?>:</label>
+	<label for="<?php echo $this->get_field_id('order'); ?>"><?php _e('Order', 'brawo'); ?>:</label>
 	<select name="<?php echo $this->get_field_name('order'); ?>" id="<?php echo $this->get_field_id('order'); ?>" class="widefat">
-		<option value="DESC"<?php if( $order == 'DESC') echo ' selected'; ?>><?php _e('Descending', 'bravo'); ?></option>
-		<option value="ASC"<?php if( $order == 'ASC') echo ' selected'; ?>><?php _e('Ascending', 'bravo'); ?></option>
+		<option value="DESC"<?php if( $order == 'DESC') echo ' selected'; ?>><?php _e('Descending', 'brawo'); ?></option>
+		<option value="ASC"<?php if( $order == 'ASC') echo ' selected'; ?>><?php _e('Ascending', 'brawo'); ?></option>
 	</select>
   </p>
 
