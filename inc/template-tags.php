@@ -6,6 +6,35 @@
  *
  * @package brawo
  */
+if ( !function_exists('brawo_post_img') ) :
+	/**
+	 * Echo image URL from a post in the loop by these priorities.
+	 * 1) Featured image.
+	 * 2) First image/video attatched to a post.
+	 * 3) Fallback image specified this theme.
+	 * 
+	 * @param string $image_size Echo image url according to $image_size. Accepted parameters are thumbnail, medium, large, or full.
+	 */
+	function brawo_post_img($image_size='thubmnail'){
+		if(has_post_thumbnail()) {
+			$image_id = get_post_thumbnail_id();
+			$image_url = wp_get_attachment_image_src($image_id, $image_size, true);
+			echo $image_url[0];
+		} else {
+			global $post;
+			$first_img = '';
+			ob_start();
+			ob_end_clean();
+			$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+			if(isset($matches[1][0])) {
+				$first_img = $matches[1][0];
+			} else {
+				$first_img = get_template_directory_uri() . "/img/no-image.png";
+			}
+			echo $first_img;
+		}
+	}
+endif;
 
 if ( !function_exists( 'brawo_post_date' )) :
 /**

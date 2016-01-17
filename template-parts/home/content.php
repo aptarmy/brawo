@@ -22,6 +22,7 @@
 	</header>
 
 	<div class="post-content">
+		<img src="<?php brawo_post_img('thumbnail') ?>">
 		<?php
 			$content = get_the_excerpt() ? get_the_excerpt() : get_the_content();
 			$excerpt = wp_trim_words($content, 50, '');
