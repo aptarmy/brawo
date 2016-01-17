@@ -3,17 +3,17 @@
  * Count post view
  * 
  * To display post count view in theme use this code
-	$meta_value = get_post_meta( $post_ID, '_s_post_views_count', true );
+	$meta_value = get_post_meta( $post_ID, 'bravo_post_views_count', true );
 	if( !empty( $meta_value ) ) {
 		echo $meta_value;
 	}
  */
-function _s_metadata_post_views_count() {
+function bravo_metadata_post_views_count() {
 	if (is_single()) {
 
 		global $post;
 		//Set the name of the Posts Custom Field.
-		$count_key = '_s_post_views_count'; 
+		$count_key = 'bravo_post_views_count'; 
 
 		//Returns values of the custom field with the specified key from the specified post.
 		$count = get_post_meta($post->ID, $count_key, true);
@@ -37,4 +37,4 @@ function _s_metadata_post_views_count() {
 		//delete_post_meta_by_key($count_key);
 	}
 }
-add_action('wp_head', '_s_metadata_post_views_count');
+add_action('wp_head', 'bravo_metadata_post_views_count');

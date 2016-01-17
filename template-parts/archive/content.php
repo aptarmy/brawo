@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package _s
+ * @package bravo
  */
 
 ?>
@@ -17,7 +17,7 @@
 
 	?>
 		<div class="post-meta">
-			<?php _s_post_date(); _s_post_author(); ?>
+			<?php bravo_post_date(); bravo_post_author(); ?>
 		</div>
 	</header>
 
@@ -26,15 +26,15 @@
 			$content = get_the_excerpt() ? get_the_excerpt() : get_the_content();
 			$excerpt = wp_trim_words($content, 50, '');
 			echo $excerpt;
-			printf(__( '<span class="post-readmore"><a href="%s">Read more</a></span>', '_s' ), get_the_permalink());
+			printf(__( '<span class="post-readmore"><a href="%s">Read more</a></span>', 'bravo' ), get_the_permalink());
 		?>
 	</div>
 
 	<footer class="post-footer">
 		<?php
-			_s_post_cats();
-			_s_post_tags();
-			_s_post_comment_link();
+			bravo_post_cats();
+			bravo_post_tags();
+			bravo_post_comment_link();
 		?>
 	</footer>
 </article>

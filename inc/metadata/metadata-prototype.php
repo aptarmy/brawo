@@ -12,22 +12,22 @@
 /**
  * Function to add metabox
  */
-function _s_custom_meta() {
-	add_meta_box( '_s_meta', __( 'Meta Box Title', '_s' ), '_s_meta_form', 'post', 'side', 'default' );
+function bravo_custom_meta() {
+	add_meta_box( 'bravo_meta', __( 'Meta Box Title', 'bravo' ), 'bravo_meta_form', 'post', 'side', 'default' );
 }
-add_action( 'add_meta_boxes', '_s_custom_meta' );
+add_action( 'add_meta_boxes', 'bravo_custom_meta' );
 
 /**
  * Call back function
  */
-function _s_meta_form( $post ) {
-    wp_nonce_field( basename( __FILE__ ), '_s_nonce' ); // For security check. Read WP document for more infomation.
-    $_s_stored_meta = get_post_meta( $post->ID );
+function bravo_meta_form( $post ) {
+    wp_nonce_field( basename( __FILE__ ), 'bravo_nonce' ); // For security check. Read WP document for more infomation.
+    $bravo_stored_meta = get_post_meta( $post->ID );
     ?>
  
     <p>
-        <label for="meta-key" ><?php _e( 'Example Text Input', '_s' )?></label>
-        <input type="text" name="meta-key" id="meta-key" value="<?php if ( isset ( $_s_stored_meta['meta-key'] ) ) echo $_s_stored_meta['meta-key'][0]; ?>" />
+        <label for="meta-key" ><?php _e( 'Example Text Input', 'bravo' )?></label>
+        <input type="text" name="meta-key" id="meta-key" value="<?php if ( isset ( $bravo_stored_meta['meta-key'] ) ) echo $bravo_stored_meta['meta-key'][0]; ?>" />
     </p>
  
     <?php
@@ -36,12 +36,12 @@ function _s_meta_form( $post ) {
 /**
  * Saves the custom meta input
  */
-function _s_meta_save( $post_id ) {
+function bravo_meta_save( $post_id ) {
  
     // Checks save status
     $is_autosave = wp_is_post_autosave( $post_id );
     $is_revision = wp_is_post_revision( $post_id );
-    $is_valid_nonce = ( isset( $_POST[ '_s_nonce' ] ) && wp_verify_nonce( $_POST[ '_s_nonce' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
+    $is_valid_nonce = ( isset( $_POST[ 'bravo_nonce' ] ) && wp_verify_nonce( $_POST[ 'bravo_nonce' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
  
     // Exits script depending on save status
     if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
@@ -54,7 +54,7 @@ function _s_meta_save( $post_id ) {
     }
  
 }
-add_action( 'save_post', '_s_meta_save' );
+add_action( 'save_post', 'bravo_meta_save' );
 
 /**
  * To display meta data added to a post use this code in the loop

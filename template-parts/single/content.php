@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package _s
+ * @package bravo
  */
 
 ?>
@@ -17,7 +17,7 @@
 
 	?>
 		<div class="post-meta">
-			<?php _s_post_date(); _s_post_author(); ?>
+			<?php bravo_post_date(); bravo_post_author(); ?>
 		</div>
 	</header>
 
@@ -25,7 +25,7 @@
 		<?php
 			the_content();
 			wp_link_pages( array(
-				'before'		=> '<div class="post-subpage">' . esc_html__( 'Pages:', '_s' ),
+				'before'		=> '<div class="post-subpage">' . esc_html__( 'Pages:', 'bravo' ),
 				'after'			=> '</div>',
 				'link_before'   => '<span>',
 				'link_after'    => '</span>',
@@ -35,12 +35,12 @@
 
 	<footer class="post-footer">
 		<?php
-			_s_post_cats();
-			_s_post_tags();
-			_s_post_comment_link();
-			_s_post_views_count();
-			_s_post_rating();
-			_s_post_edit();
+			bravo_post_cats();
+			bravo_post_tags();
+			bravo_post_comment_link();
+			bravo_post_views_count();
+			bravo_post_rating();
+			bravo_post_edit();
 		?>
 	</footer>
 </article>
