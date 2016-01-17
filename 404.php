@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<main class="site-main">
+	<main id="site-main">
 
 		<section class="post-404">
 			<header class="post-header">

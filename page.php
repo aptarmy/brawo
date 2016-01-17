@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<main class="site-main">
+	<main id="site-main">
 
 			<?php
 			while ( have_posts() ) : the_post();

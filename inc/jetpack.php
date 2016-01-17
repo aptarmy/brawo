@@ -16,7 +16,7 @@
 function brawo_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
-		'container' => 'main',
+		'container' => 'site-main',
 		'render'    => 'brawo_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
