@@ -54,7 +54,7 @@ function brawo_post_date() {
 	);
 
 	printf(
-		__( '<span class="meta-date">Post on : %s</span>', 'post date', 'brawo' ), $time_string
+		__( '<span class="meta-date">Post on : %s</span>', 'brawo' ), $time_string
 	);
 }
 endif;
@@ -66,7 +66,7 @@ if (!function_exists('brawo_post_author')) :
 	function brawo_post_author() {
 		$author_name = '<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a>';
 		printf(
-			__( '<span class="meta-author">by %s</span>', 'post author', 'brawo' ),
+			__( '<span class="meta-author">by %s</span>', 'brawo' ),
 			$author_name
 		);
 	}

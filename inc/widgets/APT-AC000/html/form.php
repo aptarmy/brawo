@@ -107,7 +107,7 @@
 		<?php foreach ($sizes as $size) : ?>
 		  <option value="<?php echo $size; ?>"<?php if ($thumb_size == $size) echo ' selected'; ?>><?php echo $size; ?></option>
 		<?php endforeach; ?>
-		<option value="full"<?php if ($thumb_size == $size) echo ' selected'; ?>><?php _e('full'); ?></option>
+		<option value="full"<?php if ($thumb_size == $size) echo ' selected'; ?>><?php _e('full', 'brawo'); ?></option>
 	  </select>
 	</p>
 
@@ -140,7 +140,7 @@
   <p>
 	<label for="<?php echo $this->get_field_id('cats'); ?>"><?php _e( 'Categories', 'brawo' ); ?>:</label>
 	<select name="<?php echo $this->get_field_name('cats'); ?>[]" id="<?php echo $this->get_field_id('cats'); ?>" class="widefat" style="height: auto;" size="<?php echo $c ?>" multiple>
-	  <option value="" <?php if (empty($cats)) echo 'selected="selected"'; ?>><?php _e('&ndash; Show All &ndash;') ?></option>
+	  <option value="" <?php if (empty($cats)) echo 'selected="selected"'; ?>><?php _e('&ndash; Show All &ndash;', 'brawo') ?></option>
 	  <?php
 	  $categories = get_categories( 'hide_empty=0' );
 	  foreach ($categories as $category ) { ?>
@@ -158,7 +158,7 @@
 	<p>
 	  <label for="<?php echo $this->get_field_id('tags'); ?>"><?php _e( 'Tags', 'brawo' ); ?>:</label>
 	  <select name="<?php echo $this->get_field_name('tags'); ?>[]" id="<?php echo $this->get_field_id('tags'); ?>" class="widefat" style="height: auto;" size="<?php echo $t ?>" multiple>
-		<option value="" <?php if (empty($tags)) echo 'selected="selected"'; ?>><?php _e('&ndash; Show All &ndash;') ?></option>
+		<option value="" <?php if (empty($tags)) echo 'selected="selected"'; ?>><?php _e('&ndash; Show All &ndash;', 'brawo') ?></option>
 		<?php
 		foreach ($tag_list as $tag) { ?>
 		  <option value="<?php echo $tag->term_id; ?>" <?php if (is_array($tags) && in_array($tag->term_id, $tags)) echo 'selected="selected"'; ?>><?php echo $tag->name;?></option>
@@ -170,7 +170,7 @@
   <p>
 	<label for="<?php echo $this->get_field_id('types'); ?>"><?php _e( 'Post types', 'brawo' ); ?>:</label>
 	<select name="<?php echo $this->get_field_name('types'); ?>[]" id="<?php echo $this->get_field_id('types'); ?>" class="widefat" style="height: auto;" size="<?php echo $n ?>" multiple>
-	  <option value="" <?php if (empty($types)) echo 'selected="selected"'; ?>><?php _e('&ndash; Show All &ndash;') ?></option>
+	  <option value="" <?php if (empty($types)) echo 'selected="selected"'; ?>><?php _e('&ndash; Show All &ndash;', 'brawo') ?></option>
 	  <?php
 	  $args = array( 'public' => true );
 	  $post_types = get_post_types( $args, 'names' );
@@ -199,7 +199,7 @@
 	  <option value="date"<?php if( $orderby == 'date') echo ' selected'; ?>><?php _e('Published Date', 'brawo'); ?></option>
 	  <option value="title"<?php if( $orderby == 'title') echo ' selected'; ?>><?php _e('Title', 'brawo'); ?></option>
 	  <option value="comment_count"<?php if( $orderby == 'comment_count') echo ' selected'; ?>><?php _e('Comment Count', 'brawo'); ?></option>
-	  <option value="rand"<?php if( $orderby == 'rand') echo ' selected'; ?>><?php _e('Random'); ?></option>
+	  <option value="rand"<?php if( $orderby == 'rand') echo ' selected'; ?>><?php _e('Random', 'brawo'); ?></option>
 	  <option value="meta_value"<?php if( $orderby == 'meta_value') echo ' selected'; ?>><?php _e('Custom Field', 'brawo'); ?></option>
 	  <option value="menu_order"<?php if( $orderby == 'menu_order') echo ' selected'; ?>><?php _e('Menu Order', 'brawo'); ?></option>
 	</select>

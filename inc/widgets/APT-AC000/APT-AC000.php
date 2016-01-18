@@ -23,9 +23,9 @@ if ( !class_exists( 'APT_AC000' ) ) {
 
       $this->alt_option_name = 'widget_ultimate_posts';
 
-      add_action('save_post', array(&$this, 'flush_widget_cache'));
-      add_action('deleted_post', array(&$this, 'flush_widget_cache'));
-      add_action('switch_theme', array(&$this, 'flush_widget_cache'));
+      add_action('save_post', array(&$this, 'clear_widget_cache'));
+      add_action('deleted_post', array(&$this, 'clear_widget_cache'));
+      add_action('switch_theme', array(&$this, 'clear_widget_cache'));
       add_action('admin_enqueue_scripts', array(&$this, 'enqueue_admin_scripts'));
 
       if (apply_filters('APT_AC000_enqueue_styles', true) && !is_admin()) {
@@ -215,7 +215,7 @@ if ( !class_exists( 'APT_AC000' ) ) {
         $instance['after_posts'] = wp_filter_post_kses($new_instance['after_posts']);
       }
 
-      $this->flush_widget_cache();
+      $this->clear_widget_cache();
 
       $alloptions = wp_cache_get( 'alloptions', 'options' );
       if ( isset( $alloptions['widget_ultimate_posts'] ) )
@@ -225,7 +225,7 @@ if ( !class_exists( 'APT_AC000' ) ) {
 
     }
 
-    function flush_widget_cache() {
+    function clear_widget_cache() {
 
       wp_cache_delete( 'widget_ultimate_posts', 'widget' );
 

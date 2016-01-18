@@ -41,12 +41,12 @@
                 <?php endif; ?>
 
                 <?php if ($instance['show_date'] && $instance['show_author']) : ?>
-                  <span class="sep"><?php _e('|', 'upw'); ?></span>
+                  <span class="sep"><?php _e('|', 'brawo'); ?></span>
                 <?php endif; ?>
 
                 <?php if ($instance['show_author']) : ?>
                   <span class="author vcard">
-                    <?php echo __('By', 'upw'); ?>
+                    <?php echo __('By', 'brawo'); ?>
                     <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author" class="fn">
                       <?php echo get_the_author(); ?>
                     </a>
@@ -54,12 +54,12 @@
                 <?php endif; ?>
 
                 <?php if ($instance['show_author'] && $instance['show_comments']) : ?>
-                  <span class="sep"><?php _e('|', 'upw'); ?></span>
+                  <span class="sep"><?php _e('|', 'brawo'); ?></span>
                 <?php endif; ?>
 
                 <?php if ($instance['show_comments']) : ?>
                   <a class="comments" href="<?php comments_link(); ?>">
-                    <?php comments_number(__('No comments', 'upw'), __('One comment', 'upw'), __('% comments', 'upw')); ?>
+                    <?php comments_number(__('No comments', 'brawo'), __('One comment', 'brawo'), __('% comments', 'brawo')); ?>
                   </a>
                 <?php endif; ?>
 
@@ -91,7 +91,7 @@
             if ($instance['show_cats'] && $categories) :
             ?>
               <div class="entry-categories">
-                <strong class="entry-cats-label"><?php _e('Posted in', 'upw'); ?>:</strong>
+                <strong class="entry-cats-label"><?php _e('Posted in', 'brawo'); ?>:</strong>
                 <span class="entry-cats-list"><?php echo $categories; ?></span>
               </div>
             <?php endif; ?>
@@ -101,7 +101,7 @@
             if ($instance['show_tags'] && $tags) :
             ?>
               <div class="entry-tags">
-                <strong class="entry-tags-label"><?php _e('Tagged', 'upw'); ?>:</strong>
+                <strong class="entry-tags-label"><?php _e('Tagged', 'brawo'); ?>:</strong>
                 <span class="entry-tags-list"><?php echo $tags; ?></span>
               </div>
             <?php endif; ?>
@@ -140,7 +140,7 @@
   <?php else : ?>
 
     <p class="APT-AC000-not-found">
-      <?php _e('No posts found.', 'upw'); ?>
+      <?php _e('No posts found.', 'brawo'); ?>
     </p>
 
   <?php endif; ?>
