@@ -211,11 +211,6 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
- * Load Metadata
- */
-require get_template_directory() . '/inc/metadata/metadata.php';
-
-/**
  * Load Widgets
  */
 require get_template_directory() . '/inc/widgets/widgets.php';

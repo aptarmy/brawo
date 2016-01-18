@@ -38,7 +38,7 @@
 			brawo_post_cats();
 			brawo_post_tags();
 			brawo_post_comment_link();
-			brawo_post_views_count();
+			brawo_post_views();
 			brawo_post_rating();
 			brawo_post_edit();
 		?>

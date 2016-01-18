@@ -131,74 +131,27 @@ if (!function_exists('brawo_post_edit')) :
 	}
 endif;
 
-if (!function_exists('brawo_post_rating')):
+if ( !function_exists('brawo_post_views') ) :
 	/**
-	 * Display post star rating using metadata(metabox) added by "/inc/metabox/metabox.php"
-	 * This function should be used within the loop.
-	 * the HTML structure will be...
-	 * meta.rating > meta-rating-background > meta-rating-color
+	 * Echo post-views counted by 'APT-meta-views' plug-in.
 	 */
-	function brawo_post_rating(){
-		$meta_value = get_post_meta( get_the_ID(), 'brawo-meta-rating', true );
-		if( !empty( $meta_value ) ) {
-		?>
-			<div class="meta-rating">
-				<span class="meta-rating-background">
-					<span class="meta-rating-color"></span>
-				</span>
-			</div>
-			<style>
-				.meta-rating {
-					font-size: 1em;
-					height: 1em;
-					width: 5em;
-					position: relative;
-					font-family: 'Genericons';
-				}
-				.meta-rating-background {
-					color: wheat;
-					position: absolute;
-					display: inline-block;
-				}
-				.meta-rating-background:after {
-					content: "\f512\f512\f512\f512\f512";
-				}
-				.meta-rating-color {
-					width: <?php echo $meta_value; ?>%;
-					color: red;
-					overflow: hidden;
-					position: absolute;
-					display: inline-block;
-				}
-				.meta-rating-color:after {
-					content: "\f512\f512\f512\f512\f512";
-				}
-			</style>
-		<?php
+	function brawo_post_views() {
+		if (function_exists('apt_meta_views_get')) {
+			apt_meta_views_get();
 		}
-
 	}
 endif;
 
-if (!function_exists('brawo_post_views_count')) {
+if ( !function_exists('brawo_post_rating') ) :
 	/**
-	 * display post view count using post metadata added by the file "/inc/metadata/metadata-post-view.php"
-	 * the HTML structure will be...
-	 * span.meta-views
+	 * Echo post-views counted by 'APT-meta-views' plug-in.
 	 */
-	function brawo_post_views_count() {
-		$meta_value = get_post_meta(get_the_ID(), 'brawo_post_views_count', true );
-		if( !empty( $meta_value ) ) {
-			printf(
-				__('<span class="meta-views">%1s views</span>', 'post views count', 'brawo'),
-				$meta_value
-			);
-		} else {
-			_e('<span class="meta-views">0 views</span>', 'post views count', 'brawo');
+	function brawo_post_rating() {
+		if (function_exists('apt_meta_rating_get')) {
+			apt_meta_rating_get();
 		}
 	}
-}
-
+endif;
 /**
  * Returns true if a blog has more than 1 category.
  *
