@@ -31,7 +31,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Links
 	## Menus
 # Screen Reader
-# Alignments
 # Clearings
 # Widgets
 # Content
@@ -77,14 +76,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "modules/screen_reader";
 
 /*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-@import "modules/alignments";
 
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-@import "widgets/widgets";
+@import "plugins/plugins";
 
 /*--------------------------------------------------------------
 # Content
